@@ -67,6 +67,8 @@ switch(type){
         res = change.octal2hex(text);
         break;
     default:
+        res = 'Invalid Input';
+        break;
 }
 
    
