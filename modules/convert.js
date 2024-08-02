@@ -4,7 +4,7 @@ const decimal2hex = (text) => {
     let q = Number(text);
     const remainder = [];
     while (q) {
-        r = q % 16;
+        let r = q % 16;
         if (r > 9) {
             r = String.fromCharCode(55 + r);
         }
@@ -17,6 +17,7 @@ const decimal2hex = (text) => {
 const decimal2bin = (text) => {
     let q = Number(text);
     const remainder = [];
+    let r;
     while (q) {
         r = q % 2;
         remainder.push(r);
@@ -28,6 +29,7 @@ const decimal2bin = (text) => {
 const decimal2octal = (text) => {
     let q = Number(text);
     const remainder = [];
+    let r;
     while (q) {
         r = q % 8;
         remainder.push(r);
@@ -37,7 +39,6 @@ const decimal2octal = (text) => {
 }
 
 const decimal2char = (text) => String.fromCharCode(Number(text));
-
 
 const char2decimal = (text) => text.charCodeAt(0);
 
@@ -52,6 +53,7 @@ const bin2decimal = (text) => {
 
 const hex2decimal = (text) => {
     let res = 0
+    let value;
     const last = text.length -1;
     for (let i = last; i >= 0; i--) {
         const code = text.charCodeAt(i);
@@ -66,6 +68,7 @@ const hex2decimal = (text) => {
 
 const octal2decimal = (text) => {
     let res = 0
+    let value;
     const last = text.length -1;
     for (let i = last; i >= 0; i--) {
         value = Number(text[i]);
@@ -117,6 +120,7 @@ const bin2octal = (text) => {
 
 const hex2bin = (text) => {
     let res = '';
+    let code;
 
     text.split('').forEach((char) => {
         let value = Number(char);
@@ -153,6 +157,7 @@ const hex2bin = (text) => {
 }
 
 const octal2bin = (text) => {
+    let code;
     let res = '';
 
     text.split('').forEach((char) => {

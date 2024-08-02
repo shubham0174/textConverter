@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Encoder/Decoder</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Base Encoder/Decoder</h1>
+    </header>
+    <main>
+        <section>
+            <div class="form-div">
+                <div class="content">
+                    <form id="myform">
+                        <div class="field">
+                            <label for="convert">Convert From : </label>
+                            <input class="input-field" type="text" id="convert" name="convert" list="convert-list" required>
+                            <datalist id="convert-list">
+                                <option value="char2bin"></option>
+                                <option value="char2hex"></option>
+                                <option value="char2decimal"></option>
+                                <option value="char2octal"></option>
+                                <option value="decimal2bin"></option>
+                                <option value="decimal2char"></option>
+                                <option value="decimal2hex"></option>
+                                <option value="decimal2octal"></option>
+                                <option value="hex2bin"></option>
+                                <option value="hex2char"></option>
+                                <option value="hex2decimal"></option>
+                                <option value="hex2octal"></option>
+                                <option value="bin2char"></option>
+                                <option value="bin2decimal"></option>
+                                <option value="bin2hex"></option>
+                                <option value="bin2octal"></option>
+                                <option value="octal2bin"></option>
+                                <option value="octal2char"></option>
+                                <option value="octal2decimal"></option>
+                                <option value="octal2hex"></option>    
+                            </datalist>
+                        </div>
+                        <div class="field">
+                            <label for="text">Input Text : </label>
+                            <input class="input-field" type="text" id="text" name="text" required>
+                        </div>
+                        <input class="btn" type="submit" value="CONVERT">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="output-div">
+                <p>output will be shown here</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
